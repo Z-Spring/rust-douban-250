@@ -55,12 +55,6 @@ mod tests {
             movie_actors.push(movie_actor);
         }
 
-        // let ids = doc
-        //     .select(&id_selector)
-        //     .next()
-        //     .unwrap()
-        //     .text()
-        //     .collect::<Vec<_>>();
         let mut movie_ids = vec![];
         let ids = doc
             .select(&id_selector)

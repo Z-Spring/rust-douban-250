@@ -16,7 +16,6 @@ use tokio::time::Instant;
 async fn main() {
     let now = Instant::now();
     let movies = handle_data().await;
-    println!("{:?}", movies);
     let data = match write_to_file(movies).await {
         Ok(_) => format!("success write json to file!"),
         Err(err) => format!("write json to file error: {}", err),

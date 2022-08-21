@@ -182,6 +182,8 @@ pub async fn write_to_file(movie: Vec<Movie>) -> result::Result<(), io::Error> {
     };
     let mut file = File::create("README.md").await?;
     //    file.write(b )
+    file.write_all(b"> use Rust to crawl douban moive infos.\n")
+        .await?;
     file.write_all(&data.as_bytes()).await?;
     // file.write_all(&data.as_bytes())?;
     Ok(())
